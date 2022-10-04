@@ -112,15 +112,23 @@ public class ArchistarEngine implements Engine {
 
     @Override
     public String reconstruct(Object requestDTO, boolean doYourBest) throws ReconstructionException {
-        Share[] shares;
+        Share[] shares = new Share[0];
 
-        if (engine.toString().contains("Shamir")) {
+        if (engine.toString().contains("shamir")) {
             shares = createShamirShares(doYourBest, (ShamirShareModel) requestDTO);
-        } else if (engine.toString().contains("PSS")) {
+        } 
+        if (engine.toString().contains("pss")) {
+            assert requestDTO instanceof PSSShareModel;
             shares = createPSSShares(doYourBest, (PSSShareModel) requestDTO);
-        } else if (engine.toString().contains("CSS")) {
+        } 
+
+        if (engine.toString().contains("css")) {
+            assert requestDTO instanceof CSSShareModel;
             shares = createCSSShares(doYourBest, (CSSShareModel) requestDTO);
-        } else {
+        } 
+        
+        if (engine.toString().contains("krawczyk")) {
+            assert requestDTO instanceof KrawczykShareModel;
             shares = createKrawczykShares(doYourBest, (KrawczykShareModel) requestDTO);
         }
 
