@@ -32,7 +32,6 @@ spring.datasource.password=SENHA DO BANCO DE DADOS
 secstor.n=NÚMERO DE CHAVES GERADAS NO SPLIT
 secstor.k=NÚMERO MÍNIMO DE CHAVES UTILIZADAS NO RECONSTRUCT
 ```
-Obs.: o endereço do banco de dados e a porta também podem mudar, mas para a execução em uma máquina local, pode se manter os mesmos utilizados acima.
 4. A partir da ferramente realize um <i><b>build</b></i> para que os arquivos de código fonte sejam compilados e os arquivos de saída (para execução) sejam gerados;
 5. Execute o projeto a partir da classe que contém o método <i><b>main</b></i>.
 
