@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Random;
 
 @Service
 @Transactional
@@ -15,7 +16,8 @@ public class NumberServiceImplementation implements NumberService {
 
     @Override
     public NumberModel getNumbers() {
-        return this.numberRepository.getRandom();
+        long number = new Random().nextLong(2000) + 1;
+        return this.numberRepository.findById(number).orElse(null);
     }
 
     @Override
@@ -33,11 +35,5 @@ public class NumberServiceImplementation implements NumberService {
     @Override
     public boolean isEmpty() {
         return this.numberRepository.isEmpty() == 0;
-    }
-
-
-    @Override
-    public void deleteAll() {
-        this.numberRepository.deleteAll();
     }
 }

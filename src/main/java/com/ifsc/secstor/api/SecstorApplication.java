@@ -1,19 +1,13 @@
 package com.ifsc.secstor.api;
 
-import com.at.archistar.crypto.secretsharing.WeakSecurityException;
 import com.ifsc.secstor.api.config.SecstorConfig;
-import com.ifsc.secstor.api.service.SecretSharingImplementation;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.Bean;
-
-import java.security.NoSuchAlgorithmException;
 
 @EnableConfigurationProperties(SecstorConfig.class)
 @EnableCaching

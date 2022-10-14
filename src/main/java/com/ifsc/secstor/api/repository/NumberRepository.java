@@ -10,7 +10,4 @@ import org.springframework.stereotype.Repository;
 public interface NumberRepository extends JpaRepository<NumberModel, Long> {
     @Query(value = "SELECT COUNT(*) FROM tb_pvss_numbers", nativeQuery = true)
     int isEmpty();
-
-    @Query(value = "SELECT * FROM tb_pvss_numbers ORDER BY RAND() LIMIT 1", nativeQuery = true)
-    NumberModel getRandom();
 }

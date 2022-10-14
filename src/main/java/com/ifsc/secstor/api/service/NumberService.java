@@ -8,6 +8,4 @@ public interface NumberService {
     void saveNumber(String groupPrimeOrder, String g1, String g2, String secret);
 
     boolean isEmpty();
-
-    void deleteAll();
 }

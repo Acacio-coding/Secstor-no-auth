@@ -32,8 +32,13 @@ spring.datasource.password=SENHA DO BANCO DE DADOS
 secstor.n=NÚMERO DE CHAVES GERADAS NO SPLIT
 secstor.k=NÚMERO MÍNIMO DE CHAVES UTILIZADAS NO RECONSTRUCT
 ```
-4. A partir da ferramente realize um <i><b>build</b></i> para que os arquivos de código fonte sejam compilados e os arquivos de saída (para execução) sejam gerados;
-5. Execute o projeto a partir da classe que contém o método <i><b>main</b></i>.
+4. Caso esteja utilizando docker, utilize o comando abaixo, para que o container do banco de dados seja criado:
+
+```
+docker-compose up --build --force-recreate
+```
+5. A partir da ferramente realize um <i><b>build</b></i> para que os arquivos de código fonte sejam compilados e os arquivos de saída (para execução) sejam gerados;
+6. Execute o projeto a partir da classe que contém o método <i><b>main</b></i>.
 
 ### Request throttling
 
